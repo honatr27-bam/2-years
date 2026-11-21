@@ -123,31 +123,30 @@ for (let i = 0; i < 34; i++) {
   document.body.appendChild(h);
 }
 
-/* ---------- pixel cat ---------- */
-(function drawCat() {
+/* ---------- pixel dino ---------- */
+(function drawDino() {
   const rows = [
-    ".BB..........BB.",
-    ".BBB........BBB.",
-    ".BBBBBBBBBBBBBB.",
-    "BBBBBBBBBBBBBBBB",
-    "BBWWWWBBBBWWWWBB",
-    "BBWWBBBBBBWWBBBB",
-    "BBBBBBBBBBBBBBBB",
-    "BBBBBBBBBBBBBBBB",
-    "BBBBRRBBBBRRBBBB",
-    "BBBRRRRRRRRRRBBB",
-    "BBBRRRRRRRRRRBBB",
-    ".BBBRRRRRRRRBBB.",
-    "..BBBBRRRRBBBB..",
-    "..BBBBBRRBBBBB.."
+    "....D..DD..D....",
+    "..GGGGGGGGGGGG..",
+    ".GGGGGGGGGGGGGG.",
+    ".GGWWGGGGGGWWGG.",
+    ".GGKWGGGGGGKWGG.",
+    ".GGGGGGGGGGGGGG.",
+    ".GGPPGGGGGGPPGG.",
+    "..GGGGKKKKGGGG..",
+    "..GGGRRGGRRGGG..",
+    "DDGGRRRRRRRRGGDD",
+    "DDGGRRRRRRRRGGDD",
+    "..DGGRRRRRRGGD..",
+    "..GGGGRRRRGGGG..",
+    "..GGGGGRRGGGGG.."
   ];
-  const col = { B: '#1b1415', W: '#ffffff', R: '#ee2e4f' };
+  const col = { G: '#6cc788', D: '#3f9a5e', W: '#ffffff', K: '#1b1415', P: '#ff9db5', R: '#ee2e4f' };
   const c = $('#cat').getContext('2d');
   rows.forEach((r, y) => [...r].forEach((ch, x) => {
     if (col[ch]) { c.fillStyle = col[ch]; c.fillRect(x, y, 1, 1); }
   }));
 })();
-
 /* ---------- heart particles ---------- */
 const fx = $('#fx'), cx = fx.getContext('2d');
 let P = [];
